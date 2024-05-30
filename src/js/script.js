@@ -1,5 +1,11 @@
 function botaoConverter() {
     var valorEmDolar = document.getElementById("valorEmDolar").value
+
+    if (isNaN(valorEmDolar) || valorEmDolar.trim() === "") {
+        alert("Digite um valor válido");
+        return;  
+    }
+    
     var cotacaoDoDolar = 5.32;
     var valorEmReal = valorEmDolar * cotacaoDoDolar
 
